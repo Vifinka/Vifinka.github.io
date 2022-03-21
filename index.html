@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ropa+Sans:ital@0;1&display=swap" rel="stylesheet">     
+    <title>Jednoduchokvir</title>
+    <script>
+        const blue= {
+                circle_classes: "skr-circle blue-bck",
+                Le:"skr-pismena red",
+                Ge:"skr-pismena orange",
+                Be:"skr-pismena green",
+                Te:"skr-pismena blue-reverse",
+                text:"Termín transrodovosť zahŕňa veľké spektrum rodových identít, binárnych aj nebinárnych, ktoré majú jedno spoločné: Ich rodová identita je rozličná, od tej priradenej pri narodení."
+            }
+        const green={
+                circle_classes: "skr-circle green-bck",
+                Le:"skr-pismena red",
+                Ge:"skr-pismena orange",
+                Be:"skr-pismena green-reverse",
+                Te:"skr-pismena blue",
+                text:"Bisexualita je orientácia, pri ktorej človek pociťuje náklonnosť ku viac ako jednému rodu. To môže znamenať príťažlivosť ku mužom a ženám, alebo k iným rodom. Pre niektorých ľudí bisexualita znamená príťažlivosť k presne dvom rodom - tieto dva rody nemusia byť striktne muži a ženy."
+            }
+        const orange ={
+                circle_classes: "skr-circle orange-bck",
+                Le:"skr-pismena red",
+                Ge:"skr-pismena orange-reverse",
+                Be:"skr-pismena green",
+                Te:"skr-pismena blue",
+                text:"Gej je človek, ktorý sa plne alebo aspoň čiastočne identifikuje ako muž a priťahujú ho iba ľudia, ktorí sa taktiež identifikujú plne alebo aspoň čiastočne ako muži"
+            }
+
+        const red={
+                circle_classes: "skr-circle red-bck",
+                Le:"skr-pismena red-reverse",
+                Ge:"skr-pismena orange",
+                Be:"skr-pismena green",
+                Te:"skr-pismena blue",
+                text:"Lesba je osoba, ktorá sa plne alebo aspoň čiastočne identifikuje ako žena a priťahujú ju iba osoby, ktoré sa taktiež identifikujú plne alebo aspoň čiastočne ako ženy."
+            }
+
+        text = [red, orange, green, blue]
+
+        function circle(x){
+            document.getElementById("circle").className = text[x].circle_classes;
+            document.getElementById("L").className = text[x].Le;
+            document.getElementById("G").className = text[x].Ge;
+            document.getElementById("B").className = text[x].Be;
+            document.getElementById("T").className = text[x].Te;
+            document.getElementById("text").innerText = text[x].text;
+        }
+
+    </script>
+    <style>
+
+        body{
+            padding:0;
+            margin:0;
+            background-color: white;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+   /* menu */
+
+   .topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 20px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* rgb(241,227,173)
+yellow
+
+#cce1e6 
+blue
+
+#f4c3c4 
+pink
+*/
+
+.topnav .icon {
+    float: left;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  padding:2px 20px;
+  width:96px;
+}
+
+.topnav .icon img{
+width:100%;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 17px;    
+  border: none;
+  outline: none;
+  color: white;
+  padding: 20px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #51ddaa;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.topnav a:hover, .dropdown:hover .dropbtn {
+  background-color: #009bb9;
+  color: white;
+}
+
+.dropdown-content a:hover {
+  background-color: #009bb9;
+  color: white;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.active {
+    background-color: #009bb9;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child), .dropdown .dropbtn {
+    display: none;
+  }
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .topnav.responsive .dropdown {float: none;}
+  .topnav.responsive .dropdown-content {position: relative;}
+  .topnav.responsive .dropdown .dropbtn {
+    display: block;
+    width: 100%;
+    text-align: left;
+  }
+}
+
+/* end menu */
+    
+        .intro-background{
+            width:100%;
+            padding-bottom:220px;
+            text-align: center;
+            background-color: white;
+            font-size:90px;
+            font-family: 'Ropa Sans', sans-serif;
+            font-style: italic;
+        }
+
+        .polkruh{
+            width:100%;
+            overflow:hidden;
+            padding-bottom:100px;
+        }
+
+        .polkruh-kruh{
+            width:6.666%;
+            float:right;
+        }
+
+        .about-background{
+            width: 100%;
+            padding-top:60px;
+            padding-bottom:60px;
+            overflow: hidden;
+            background-color:#676767;
+        }
+        .about-column{
+            float:left;
+            width:50%;
+            padding-top:5px;
+            text-align:center;
+        }
+
+        .about-circle{
+            width:500px;
+            height:500px;
+            line-height:500px;
+            padding:10px;
+            border-radius: 50%;
+            background-color: #cce1e6;
+            margin:auto;
+        }
+        .about-circle-img{
+            width:500px;
+            height:500px;
+            padding:10px;
+            border-radius: 50%;
+            background-color: rgb(241,227,173);
+            background-image: url("photos/Jednoducho-kvir-logo.png");
+            background-size:contain;
+            margin:auto;
+        }
+        .about-text{
+            width:70%;
+            margin:auto;
+            text-align:justify;
+            vertical-align:middle;
+            line-height:1.5;
+            display: inline-block;
+        }
+
+        .kviz-background{
+            background-color:#f4c3c4;
+        }
+
+        .kviz-inner{
+            width:75%;
+            padding-top:50px;
+            padding-bottom:50px;
+            overflow: hidden;
+            margin:auto;
+        }
+
+        .kviz-column-1{
+            width:33.33%;
+            float: left;
+            text-align:center;
+        }
+
+        .kviz-column-2{
+            width:66.66%;
+            float: left;
+            text-align:center;
+        }
+
+        .kviz-img{
+            width:80%;
+            border-radius: 50%;
+        }
+
+        .kviz-column-text{
+            width:80%;
+            padding-top:100px;
+            padding-bottom:100px;
+            margin:auto;
+        }
+
+        .kviz-nazov{
+            text-align: center;
+            font-size:75px;
+            font-family: 'Ropa Sans', sans-serif;
+            font-style: italic;
+        }
+
+        .kviz-button{
+            width:150px;
+            margin:auto;
+            padding-top:10px;
+            padding-bottom:10px;
+            background-color: rgb(241,227,173);
+            border:5px solid black;
+            text-align:center;
+            font-weight:600;
+            margin-top:40px;
+            display:block;
+            text-decoration: none;
+            color:black;
+            transition: ease-out 0.3s;
+        }
+
+        .skratky-background{
+            background-color: white;
+            padding-top:40px;
+            padding-bottom:40px;
+            width:100%;
+        }
+
+        .skr-pismena-background{
+            text-align:center;
+            font-family: 'Ropa Sans', sans-serif;
+            font-style: italic;
+    }
+
+        .skr-pismena{
+            font-size:150px;
+            display:inline;
+            padding-right:40px;
+            padding-left:40px;
+        }
+/* rgb(241,227,173)
+yellow
+
+#cce1e6 
+blue
+
+#f4c3c4 
+pink
+*/
+        .red{
+            color:#ffb9bb;
+        }
+
+        .red-reverse{
+            background-color:#ffb9bb;
+            color:white;
+            width:20px;
+        }
+        .red-bck{
+            background-color:#ffb9bb;
+        }
+        .orange{
+            color:rgb(255, 234, 149);
+        }
+
+        .orange-bck{
+            background-color:rgb(255, 234, 149);
+        }
+
+        .orange-reverse{
+            background-color:rgb(255, 234, 149);
+            color:white;
+            width:20px;
+        }
+
+        .green{
+            color:rgb(209, 255, 140);
+        }
+
+        .blue{
+            color:#cce1e6 ;
+        }
+        .green-bck{
+            background-color:rgb(209, 255, 140);
+        }
+
+        .blue-bck{
+            background-color:#cce1e6 ;
+        }
+        .green-reverse{
+            background-color:rgb(209, 255, 140);
+            color:white;
+            width:20px;
+        }
+
+        .blue-reverse{
+            background-color:#cce1e6 ;
+            color:white;
+            width:20px;
+        }
+        .skr-nazov{
+            text-align:center;
+            padding-top:30px;
+            padding-bottom:10px;
+            font-size:40px;
+        }
+
+        .skr-circle-background{
+            width:50%;
+            padding-top:40px;
+            text-align:center;
+            margin:auto;
+        }
+
+        .skr-circle{
+            width:500px;
+            height:500px;
+            padding:10px;
+            border-radius: 50%;
+            margin:auto;
+            line-height:500px;
+        }
+        .skr-circle-text{
+            width:70%;
+            margin:auto;
+            text-align:justify;
+            vertical-align:middle;
+            line-height:1.5;
+            display: inline-block;
+        }
+        /* footer */
+
+        footer{
+            background-color: #676767;
+            width:100%;
+            padding-top:40px;
+            padding-bottom:40px;
+        }
+
+        .footer-text-bck{
+            width:70%;
+            text-align: justify;
+            margin: auto;
+            color:white;
+            padding-top:20px;
+        }
+
+        .footer-image-bck{
+            width:50%;
+            text-align: justify;
+            margin: auto;
+            overflow: hidden;
+            background-color: white;
+        }
+
+        .footer-img-bck{
+            width:33.33%;
+            text-align:center;
+            float: right;
+        }
+
+        .footer-img{
+            width:90%;
+            margin:auto;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- HEADER -->
+
+    <div class="topnav" id="myTopnav">
+        <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">
+            <img src="photos/Jednoducho-kvir-logo-small.png" alt="">
+        </a>
+        <a href="/" class="active">Domov</a>
+        <a href="kviz/">Kvíz</a>
+
+
+
+        <div class="dropdown">
+          <button class="dropbtn">Orientácia 
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <a href="clanky/lesba/">Lesba</a>
+            <a href="clanky/gej/">Gej</a>
+            <a href="clanky/bisexualny clovek/">Bisexuálny človek</a>
+            <a href="clanky/pansexualny clovek/">Pansexuálny človek</a>
+            <a href="clanky/asexualny clovek/">Asexuálny človek</a>
+          </div>
+        </div> 
+
+        <div class="dropdown">
+            <button class="dropbtn">Rod 
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+              <a href="clanky/rodova identita/">Čo je to rodová identita?</a>
+              <a href="clanky/binarita/">Binarita</a>
+              <a href="clanky/transrodovy clovek/">Transrodový človek</a>
+              <a href="clanky/nebinarny clovek/">Nebinárny človek</a>
+              <a href="clanky/rodovofluidny clovek/">Rodovofluidný človek</a>
+            </div>
+          </div> 
+
+
+          <div class="dropdown">
+            <button class="dropbtn">Kvír 
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+              <a href="clanky/kvir clovek/">Kvír človek</a>
+              <a href="clanky/coming out/">Coming out</a>
+              <a href="clanky/intersex clovek/">Intersex človek</a>
+              <a href="clanky/prajd/">PRAJD</a>
+            </div>
+          </div> 
+
+        <a href="clanky/cis-het clovek/">Cis-het človek</a>
+      </div>
+      
+    <!-- GREETINGS SECTION -->
+    <div class="intro-background">
+        <div class="polkruh">
+            <img src="photos/half-p.png" alt="" class="polkruh-kruh">
+            <img src="photos/half-y.png" alt="" class="polkruh-kruh">
+            <img src="photos/half-b.png" alt="" class="polkruh-kruh">
+            <img src="photos/half-p.png" alt="" class="polkruh-kruh">
+            <img src="photos/half-y.png" alt="" class="polkruh-kruh">
+            <img src="photos/half-b.png" alt="" class="polkruh-kruh">
+            <img src="photos/half-p.png" alt="" class="polkruh-kruh">
+            <img src="photos/half-y.png" alt="" class="polkruh-kruh">
+            <img src="photos/half-b.png" alt="" class="polkruh-kruh">
+            <img src="photos/half-p.png" alt="" class="polkruh-kruh">
+            <img src="photos/half-y.png" alt="" class="polkruh-kruh">
+            <img src="photos/half-b.png" alt="" class="polkruh-kruh">
+            <img src="photos/half-p.png" alt="" class="polkruh-kruh">
+            <img src="photos/half-y.png" alt="" class="polkruh-kruh">
+            <img src="photos/half-b.png" alt="" class="polkruh-kruh">
+            
+        </div>
+            Jednoducho kvír
+    </div>
+
+    <!-- INTRO SECTION -->
+    <div class="about-background">
+        <div class="about-column">
+            <div class="about-circle">
+                <div class="about-text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat molestiae corporis qui enim, ab dolore voluptate deserunt excepturi pariatur accusamus architecto. Ab doloremque earum voluptatum laborum minima illum, praesentium maiores.
+                </div>
+           </div>
+        </div>
+        <div class="about-column">
+            <div class="about-circle-img"></div>
+        </div>
+    </div>
+
+    <!-- KVIZ SECTION -->
+
+    <div class="kviz-background">
+        <div class="kviz-inner">
+            <div class="kviz-column-1">
+                <img src="photos/hviezda.png" class="kviz-img" alt="">
+            </div>
+            <div class="kviz-column-2">
+                <div class="kviz-column-text">
+                    <div class="kviz-nazov">
+                        Získaj svoju hviezdu
+                    </div>
+                    <a class="kviz-button" href="file:///home/vifi/Desktop/">
+                        Začať
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--SKRATKY SECTION  -->
+
+    <div class="skratky-background">
+        <div class="skr-nazov">Čo znamená</div>
+        <div class="skr-pismena-background">
+            <div class="skr-pismena red" onclick="circle(0)" id="L">L</div>
+            <div class="skr-pismena orange" onclick="circle(1)" id="G">G</div>
+            <div class="skr-pismena green" onclick="circle(2)" id="B">B</div>
+            <div class="skr-pismena blue" onclick="circle(3)" id="T">T</div>
+        </div>
+        <div class="skr-circle-background">
+            <div class="skr-circle orange-bck" id="circle">
+                <div class="skr-circle-text" id="text">
+                    Gej je človek, ktorý sa plne alebo aspoň čiastočne identifikuje ako muž a priťahujú ho iba ľudia, ktorí sa taktiež identifikujú plne alebo aspoň čiastočne ako muži.                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+
+<footer>
+    <div class="footer-image-bck">
+        <div class="footer-img-bck">
+            <img src="photos/logo-ministerstva-1536x1086.jpg" class="footer-img" alt="">
+        </div>
+        <div class="footer-img-bck">
+            <img src="photos/iuventa.png" class="footer-img" alt="">
+        </div>
+        <div class="footer-img-bck">
+            <img src="photos/SQ logo.png" class="footer-img" alt="" style="padding-top:70px">
+        </div>
+    </div>
+    <div class="footer-text-bck">
+        Projekt je realizovaný v rámci Vzdelávacieho programu KompAkt (rozvíjanie aktivistických kompetencií mladých LGBT+ ľudí) občianskeho združenia Saplinq, o.z. Tento projekt bol podporený z dotačnej schémy Ministerstva školstva, vedy, výskumu a športu SR Programy pre mládež na roky 2014 – 2021, ktorú administruje IUVENTA – Slovenský inštitút mládeže. 
+    </div>
+
+</footer>
+
+</body>
+</html>
+
+<script>
+    circle(1)
+</script>

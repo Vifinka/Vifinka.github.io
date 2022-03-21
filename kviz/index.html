@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+<script src="https://kit.fontawesome.com/69835db97c.js" crossorigin="anonymous"></script>
+<style>
+
+  body{
+    margin:0;
+    background-color: #cce1e6;
+    padding:0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+
+  @font-face {
+            font-family: Rr;
+            src: url(Redressed-Regular.ttf);
+  }
+        /* menu */
+
+        .topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 20px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.active {
+  background-color: #f4c3c4;
+  color:#333;
+}
+
+/* rgb(241,227,173)
+yellow
+
+#cce1e6 
+blue
+
+#f4c3c4 
+pink
+*/
+
+.topnav .icon {
+    float: left;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  padding:2px 20px;
+  width:80px;
+}
+
+.topnav .icon img{
+width:100%;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 17px;    
+  border: none;
+  outline: none;
+  color: white;
+  padding: 20px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.topnav a:hover, .dropdown:hover .dropbtn {
+  background-color: #555;
+  color: white;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child), .dropdown .dropbtn {
+    display: none;
+  }
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .topnav.responsive .dropdown {float: none;}
+  .topnav.responsive .dropdown-content {position: relative;}
+  .topnav.responsive .dropdown .dropbtn {
+    display: block;
+    width: 100%;
+    text-align: left;
+  }
+}
+
+/* end menu */
+  .quiz-bck{
+    background-color: rgb(255, 246, 238);
+    width:90%;
+    padding-top:40px;
+    padding-bottom:40px;
+    padding-left:5%;
+    padding-right: 5%;
+  }
+
+  .quiz-row{
+    overflow: hidden;
+    width:100%;
+    padding-bottom:20px;
+    display:yes;
+  }
+
+  .quiz-col{
+    float: left;
+    width:33.33%; 
+  }
+
+  .quiz-card{
+    width:88%;
+    margin:auto;
+    box-sizing: border-box;
+    padding:5%; 
+    padding-top:60px;
+    padding-bottom:60px;
+    background-color:white;
+    border:8px solid rgb(255, 0, 0);
+    color:black;
+    text-align:center;
+    overflow: hidden;
+  }
+
+  .quiz-yas{
+    float:right;
+    padding-top:15px;
+    font-size:22px;
+  }
+
+  .quiz-nah{
+    float:left;
+    padding-top:15px;
+    font-size:22px;
+  }
+
+  label{
+    color:black;
+    font-size:25px;
+  }
+
+  .slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 15px;
+  border-radius: 5px;  
+  background: red;
+  outline: none;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+  margin-top:40px;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  border:none;
+  background: black;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  border:none;
+  height: 25px;
+  border-radius: 50%;
+  background: black;
+  cursor: pointer;
+}
+
+button{
+  background-color: white;
+  color:black;
+  border:none;
+  font-size: large;
+  padding: 10px;
+  padding-left:30px;
+  padding-right:30px;
+}
+/* new section */
+.about-circle{
+            width:500px;
+            height:500px;
+            line-height:500px;
+            padding:10px;
+            border-radius: 50%;
+            background-color: white;
+            margin:auto;
+            text-align: center;
+        }
+        .about-text{
+            width:70%;
+            margin:auto;
+            text-align:justify;
+            vertical-align:middle;
+            line-height:1.5;
+            display: inline-block;
+        }
+
+#myChart{
+  width:100%;
+  max-width:550px;
+  background-color:white;
+  box-sizing: border-box;
+  margin:auto;
+}
+
+#results{
+  width:600px;
+  height:600px;
+  padding:10px;
+  border-radius: 50%;
+  background-color: white;
+  margin:auto;
+  vertical-align:middle;
+}
+
+.results-inner{
+  padding-top:155px;
+}
+
+.result-bck{
+  display:none;
+  overflow: auto;
+}
+
+</style>
+<body>
+  <div class="topnav" id="myTopnav">
+    <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">
+        <img src="test.png" alt="">
+    </a>
+    <a href="#home" class="active">Home</a>
+    <a href="#news">News</a>
+    <a href="#contact">Contact</a>
+    <div class="dropdown">
+      <button class="dropbtn">Dropdown 
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="#">Link 1</a>
+        <a href="#">Link 2</a>
+        <a href="#">Link 3</a>
+      </div>
+    </div> 
+    <a href="#about">About</a>
+  </div>
+
+<div class="quiz-bck" id="row">
+    <!-- ROW ONE -->
+    <div class="quiz-row" id="row1">
+      <div class="quiz-col">
+        <div class="quiz-card">
+          <label for="ot1">1. Do you like the D?</label><br>
+          <input class="slider" type="range" min="0" max="10" value="5" class="slider" id="ot1">    
+          <span class="quiz-yas"><i class="fa-solid fa-thumbs-up"></i></span>
+          <span class="quiz-nah"><i class="fa-solid fa-thumbs-down"></i></span>
+        </div>
+      </div>
+      <div class="quiz-col">
+        <div class="quiz-card" style="border-color:orange">
+          <label for="ot2">2. e eeee ee eee ee eeee eee e ee e eeee eeeeeee</label><br>
+          <input class="slider" style="background-color: orange;" type="range" min="0" max="10" value="5" class="slider" id="ot2">    
+          <span class="quiz-yas"><i class="fa-solid fa-thumbs-up"></i></span>
+          <span class="quiz-nah"><i class="fa-solid fa-thumbs-down"></i></span>
+        </div>
+      </div>
+      <div class="quiz-col">
+        <div class="quiz-card" style="border-color: #ffd900;">
+          <label for="ot3">3. Do you like the D?</label><br>
+          <input class="slider" style="background-color: #ffd900;" type="range" min="0" max="10" value="5" class="slider" id="ot3">    
+          <span class="quiz-yas"><i class="fa-solid fa-thumbs-up"></i></span>
+          <span class="quiz-nah"><i class="fa-solid fa-thumbs-down"></i></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ROW TWO -->
+    <div class="quiz-row" id="row2">
+      <div class="quiz-col">
+        <div class="quiz-card" style="border-color:rgb(187, 255, 52);">
+          <label for="ot1">4. Do you like the D?</label><br>
+          <input class="slider" style="background-color: rgb(187, 255, 52);" type="range" min="0" max="10" value="5" class="slider" id="ot1">    
+          <span class="quiz-yas"><i class="fa-solid fa-thumbs-up"></i></span>
+          <span class="quiz-nah"><i class="fa-solid fa-thumbs-down"></i></span>
+        </div>
+      </div>
+      <div class="quiz-col">
+        <div class="quiz-card" style="border-color: rgb(48, 196, 255);">
+          <label for="ot1">5. loo</label><br>
+          <input class="slider" style="background-color: rgb(48, 196, 255);" type="range" min="0" max="10" value="5" class="slider" id="ot1">    
+          <span class="quiz-yas"><i class="fa-solid fa-thumbs-up"></i></span>
+          <span class="quiz-nah"><i class="fa-solid fa-thumbs-down"></i></span>
+        </div>
+      </div>
+      <div class="quiz-col">
+        <div class="quiz-card" style="border-color: rgb(198, 54, 255);">
+          <label for="ot1">6. D e eeee ee eee ee eeee eee e ee e eeee eeeeeee D?</label><br>
+          <input class="slider" style="background-color: rgb(198, 54, 255);" type="range" min="0" max="10" value="5" class="slider" id="ot1">    
+          <span class="quiz-yas"><i class="fa-solid fa-thumbs-up"></i></span>
+          <span class="quiz-nah"><i class="fa-solid fa-thumbs-down"></i></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ROW THREE -->
+    <div class="quiz-row" id="row3">
+      <div class="quiz-col">
+        <div class="quiz-card" style="border-color: rgb(255, 189, 203);">
+          <label for="ot1">7. e eeee ee eee ee eeee eee e ee e eeee eeeeeee</label><br>
+          <input class="slider" style="background-color: lightpink;" type="range" min="0" max="10" value="5" class="slider" id="ot1">    
+          <span class="quiz-yas"><i class="fa-solid fa-thumbs-up"></i></span>
+          <span class="quiz-nah"><i class="fa-solid fa-thumbs-down"></i></span>
+        </div>
+      </div>
+      <div class="quiz-col">
+        <div class="quiz-card" style="border-color: rgb(172, 234, 255);">
+          <label for="ot1">8. e eeee ee eee ee eeee eee e ee e eeee eeeeeee</label><br>
+          <input class="slider" style="background-color: rgb(172, 234, 255);" type="range" min="0" max="10" value="5" class="slider" id="ot1">    
+          <span class="quiz-yas"><i class="fa-solid fa-thumbs-up"></i></span>
+          <span class="quiz-nah"><i class="fa-solid fa-thumbs-down"></i></span>
+        </div>
+      </div>
+      <div class="quiz-col">
+        <div class="quiz-card" style="background-color: rgb(58, 16, 16); border-color: rgb(58, 16, 16);">
+          <button onclick="results()">Hotovo!</button>
+        </div>
+      </div>
+    </div>
+</div>
+
+<div class="result-bck" id="result-bck">
+  <div id="results">
+    <div class="results-inner">
+      <canvas id="myChart"></canvas>
+    </div>
+  </div>
+    <div class="about-circle">
+      <div class="about-text">
+        Gratulujem! Toto je tvoja vlastná dúhová hviezda. Dúhová hviezda graficky znázorňuje tvoje odpovede na otázky z kvízu a vytvára tak tvar pripomínajúci hviezdu. Tak ako naše hviezdy, aj naše identity sú jedinečné a unikátne, neexistujú dvaja ľudia, ktorí by boli rovnakí. Diverzita a unikátnosť našich identít, je to, čo nás robí nádhernými a výnimočnými. Naša dúhová hviezda tiež poukazuje na to, že sexuálna orientácia, rodová identita a naše vjyadrenie rodu vzájomne od seba nezávisia a môžu byť rôzne. 
+      </div>
+  </div>
+</div>
+
+<script>
+
+function results(){
+  var xValues = ["otazka 1",200,300,400,500,600,700,800];
+  var datas = [document.getElementById("ot1").value,document.getElementById("ot2").value,document.getElementById("ot3").value,9,2,9,1,7];
+
+new Chart("myChart", {
+  type: "radar",
+  data: {
+    labels: xValues,
+    datasets: [{
+      data: datas,
+      lineTension: 0,
+      backgroundColor: "rgb(98, 99, 255)",
+      borderColor: "yellow",
+      fill: false
+    }]
+  },
+  options: {
+      legend: {display: false},
+      scale: {
+          ticks: {
+                beginAtZero: true,
+                max: 10,
+                min: 0,
+                 stepSize: 1
+                }
+             }
+      }
+});
+
+document.getElementById("result-bck").style.display = "block";
+document.getElementById("row").style.display = "none";
+
+}
+
+</script>
+
+</body>
+</html>
+
+

@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bisexuálny človek - Jednoduchokvir</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ropa+Sans:ital@0;1&display=swap" rel="stylesheet">     
+   
+    <style>
+
+        body{
+            padding:0;
+            margin:0;
+            background-color: white;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        @font-face {
+            font-family: Rr;
+            src: url(Redressed-Regular.ttf);
+        }
+
+   /* menu */
+
+   .topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 20px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* rgb(241,227,173)
+yellow
+
+#cce1e6 
+blue
+
+#f4c3c4 
+pink
+*/
+
+.topnav .icon {
+    float: left;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  padding:2px 20px;
+  width:96px;
+}
+
+.topnav .icon img{
+width:100%;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 17px;    
+  border: none;
+  outline: none;
+  color: white;
+  padding: 20px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #51ddaa;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.topnav a:hover, .dropdown:hover .dropbtn {
+  background-color: #009bb9;
+  color: white;
+}
+
+.dropdown-content a:hover {
+  background-color: #009bb9;
+  color: white;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.active {
+    background-color: #009bb9;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child), .dropdown .dropbtn {
+    display: none;
+  }
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .topnav.responsive .dropdown {float: none;}
+  .topnav.responsive .dropdown-content {position: relative;}
+  .topnav.responsive .dropdown .dropbtn {
+    display: block;
+    width: 100%;
+    text-align: left;
+  }
+}
+
+/* end menu */
+
+
+.red{
+            color:#ffb9bb;
+        }
+
+        .red-reverse{
+            background-color:#ffb9bb;
+            color:white;
+            width:20px;
+        }
+        .red-bck{
+            background-color:#ffb9bb;
+        }
+        .orange{
+            color:rgb(255, 234, 149);
+        }
+
+        .orange-bck{
+            background-color:rgb(255, 234, 149);
+        }
+
+        .orange-reverse{
+            background-color:rgb(255, 234, 149);
+            color:white;
+            width:20px;
+        }
+
+        .green{
+            color:rgb(209, 255, 140);
+        }
+
+        .blue{
+            color:#cce1e6 ;
+        }
+        .green-bck{
+            background-color:rgb(209, 255, 140);
+        }
+
+        .blue-bck{
+            background-color:#cce1e6 ;
+        }
+        .green-reverse{
+            background-color:rgb(209, 255, 140);
+            color:white;
+            width:20px;
+        }
+
+
+        .posts-background{
+            width:100%;
+            padding-top:40px;
+            background-color: white;
+        }
+
+        .posts-name{
+            text-align:center;
+            font-size:50px;
+            border-bottom: 13px dotted #ffb9bb;
+            display:inline-block;
+            font-family: 'Ropa Sans', sans-serif;
+            font-style: italic;
+            margin-left:5%;
+        }
+
+        .posts-inner{
+            width:90%;
+            margin:auto;
+            overflow:hidden;
+
+        }
+
+.top-bck{
+Width:90%;
+Overflow:hidden;
+text-align: justify;
+margin: auto;
+background-color: white;
+}
+
+.top-img{
+box-sizing:content-box;
+Width:25%;
+Padding-bottom: 5%;
+Float:right;
+}
+
+.top-txt{
+Width: 70%;
+Float: left;
+}
+
+.top-link{
+    color:black;
+    background-color:#ffb9bb;
+    text-decoration: none;
+}
+
+/* kartičky part */
+
+.kart-bck{
+background-color: #ffb9bb;
+width: 100%;
+Padding-top: 40px;
+padding-bottom:40px;
+}
+
+.kart-inner{
+width: 90%;
+Margin: auto;
+Overflow: hidden;
+}
+
+.kart-c-bck{
+Float: left;
+Width: 33.333%;
+Text-align: center;
+}
+
+.kart-c-img{
+box-sizing:border-box;
+Width: 70%;
+Margin: auto;
+Border: 10px solid white;
+}
+
+.kart-c-button{
+    Width: 60%;
+    Margin: auto;
+    text-align:center;
+    background-color: white;
+    color:black;
+    padding-top:30px;
+    padding-bottom:30px;
+    font-size: 22px;
+}
+
+/* dalsie clanky */
+
+.clanky-bck{
+background-color: #676767;
+width: 100%;
+Padding-top: 80px;
+padding-bottom:120px;
+}
+
+.clanky-inner{
+width: 90%;
+Margin: auto;
+Overflow: hidden;
+}
+
+.clanky-c-bck{
+Float: left;
+Width: 25%;
+Text-align: center;
+}
+
+.clanky-c-button{
+    Width: 70%;
+    Margin: auto;
+    text-align:center;
+    background-color: white;
+    color:black;
+    padding-top:30px;
+    padding-bottom:30px;
+    font-size: 18px;
+}
+
+.clanky-name{
+    padding-left:5%;
+    color:white;
+    font-size:50px;
+    display:inline-block;
+    font-family: 'Ropa Sans', sans-serif;
+    font-style: italic;
+    padding-bottom:40px;
+}
+
+.clanok-s{
+    background-color: #ffb9bb;
+    color:white;
+    font-weight: 700;
+}
+    </style>
+</head>
+<body>
+    <!-- HEADER -->
+
+    <div class="topnav" id="myTopnav">
+        <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">
+            <img src="photos/Jednoducho-kvir-logo-small.png" alt="">
+        </a>
+        <a href="/">Domov</a>
+        <a href="kviz/">Kvíz</a>
+
+        <div class="dropdown">
+          <button class="dropbtn"><span class="active">Orientácia</span> 
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <a href="clanky/lesba/">Lesba</a>
+            <a href="clanky/gej/">Gej</a>
+            <a href="clanky/bisexualny clovek/" class="active">Bisexuálny človek</a>
+            <a href="clanky/pansexualny clovek/">Pansexuálny človek</a>
+            <a href="clanky/asexualny clovek/">Asexuálny človek</a>
+          </div>
+        </div> 
+
+        <div class="dropdown">
+            <button class="dropbtn">Rod 
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+              <a href="clanky/rodova identita/">Čo je to rodová identita?</a>
+              <a href="clanky/binarita/">Binarita</a>
+              <a href="clanky/transrodovy clovek/">Transrodový človek</a>
+              <a href="clanky/nebinarny clovek/">Nebinárny človek</a>
+              <a href="clanky/rodovofluidny clovek/">Rodovofluidný človek</a>
+            </div>
+          </div> 
+
+          <div class="dropdown">
+            <button class="dropbtn">Kvír 
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+              <a href="clanky/kvir clovek/">Kvír človek</a>
+              <a href="clanky/coming out/">Coming out</a>
+              <a href="clanky/intersex clovek/">Intersex človek</a>
+              <a href="clanky/prajd/">PRAJD</a>
+            </div>
+          </div> 
+
+        <a href="clanky/cis-het clovek/">Cis-het človek</a>
+      </div>
+
+    <!-- POST INFO -->
+    <div class="posts-background">
+        <div class="posts-name">Bisexuálny človek</div>
+        <div class="top-bck">
+            <img src="bi.png" class="top-img">
+            <p class="top-txt"><i>(Po anglicky bisexual person)</i><br><br>
+
+              Bisexualita je orientácia, pri ktorej človek pociťuje náklonnosť ku viac ako jednému rodu. To môže znamenať príťažlivosť ku mužom a ženám, alebo k iným rodom. Pre niektorých ľudí bisexualita znamená príťažlivosť k presne dvom rodom - tieto dva rody nemusia byť striktne muži a ženy.                
+              <br><br>
+              Bisexualita má dlhú históriu, na ktorú ľudia často zabúdajú. V roku 1990 bol v Amerike vydaný takzvaný “Bisexuálny Manifest” (The Bisexual Manifesto), ktorý o bisexualite hovorí ako o fluidnej (t.j. premenlivej a nestatickej) a inkluzívnej identite, ktorej cieľom nie je vytvoriť exkluzívnu komunitu so striktnými pravidlami. Naopak išlo o identitu, ktorá prijímala všetkých, ktorých nepriťahoval striktne iba jeden rod. Už v tých časoch bisexuálne komunity vnímali existenciu viac ako dvoch rodov a svoju identitu teda tiež vnímali oveľa komplexnejšie ako len: “človek, ktorého priťahujú muži a ženy”.
+              <br><br>
+              Bohužiaľ tento kontext sa hlavne kvôli naratívom populárnych médií často stráca a aj v dnešnej dobe nájdeme ľudí, ktorí sa voči bisexualite vymedzujú, tvrdia, že táto orientácia je transfóbna a neinkluzívna. Mnoho ľudí kvôli tejto stigme začalo používať iné, viac špecifické termíny, ktorými označujú svoju identitu. Jedným z nich je napríklad pansexualita.
+            
+            </p>
+            </div>
+    </div>
+
+    <!-- KARTICKY -->
+
+    <div class="kart-bck">
+        <div class="kart-inner">
+            <div class="kart-c-bck">
+                   <img src="1.png" class="kart-c-img">
+            </div>
+            <div class="kart-c-bck">
+                   <img src="2.png" class="kart-c-img">
+            </div>
+            <div class="kart-c-bck">
+                <a class="top-link" href="KTO JE TO BISEXUALNY CLOVEK.zip"><div class="kart-c-button">Stiahni definície</div></a>
+            </div>
+        </div>
+    </div>
+    <!-- /*. Sekcia s recommend článkami */ -->
+<div class="clanky-bck">
+    <div class="clanky-name">Ďalšie články</div>
+    <div class="clanky-inner">
+        <div class="clanky-c-bck">
+            <a class="top-link" href="clanky/pansexualny clovek/"><div class="clanky-c-button">Pansexuálny človek</div></a>
+        </div>
+        <div class="clanky-c-bck">
+            <a class="top-link" href="clanky/bisexualny clovek/"><div class="clanky-c-button clanok-s">Bisexuálny človek</div></a>
+        </div>
+        <div class="clanky-c-bck">
+            <a class="top-link" href="clanky/intersex clovek/"><div class="clanky-c-button">Intersex človek</div></a>
+        </div>
+        <div class="clanky-c-bck">
+            <a class="top-link" href="clanky/gej/"><div class="clanky-c-button clanok-s">Gej</div></a>
+        </div>
+    </div>
+</div>
+    <!-- FOOTER -->
+</body>
+</html>

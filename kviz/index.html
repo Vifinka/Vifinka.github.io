@@ -281,6 +281,14 @@ button{
     margin: auto;
   }
 
+
+  .result-inner-2{
+    width: 80%;
+    padding-top:40px;
+    padding-bottom:40px;
+    margin: auto;
+  }
+
 #myChart{
   width:100%;
   max-width:850px;
@@ -368,7 +376,6 @@ button{
 }
 
 #myChart{
-  width:70%;
   max-width:350px;
   background-color:white;
   box-sizing: border-box;
@@ -383,13 +390,22 @@ button{
             margin:auto;
         }
         .about-text{
-            width:80%;
+            width:90%;
             padding-left:5%;
             padding-right:5%;
             margin:auto;
             text-align:justify;
         }
+        .result-inner-2{
+    width: 100%;
+    padding-top:40px;
+    padding-bottom:40px;
+    margin: auto;
+  }
 
+.result.inner{
+  width:100%;
+}
 }
 
 </style>
@@ -519,12 +535,12 @@ button{
 
 
 <div class="result-bck" id="result-bck">
-  <div class="name" style="padding-top:20px">Výsledky</div>
+  <div class="name" style="padding-top:20px">Tvoja hviezda</div>
   <div class="result-inner">
     <canvas id="myChart"></canvas>
   </div>
 
-  <div class="result-inner">
+  <div class="result-inner-2">
     <div class="about-circle">
       <div class="about-text">
         Gratulujem! Toto je tvoja vlastná dúhová hviezda. Dúhová hviezda graficky znázorňuje tvoje odpovede na otázky z kvízu a vytvára tak tvar pripomínajúci hviezdu. Tak ako naše hviezdy, aj naše identity sú jedinečné a unikátne, neexistujú dvaja ľudia, ktorí by boli rovnakí. Diverzita a unikátnosť našich identít, je to, čo nás robí nádhernými a výnimočnými. Naša dúhová hviezda tiež poukazuje na to, že sexuálna orientácia, rodová identita a naše vjyadrenie rodu vzájomne od seba nezávisia a môžu byť rôzne. 
@@ -546,7 +562,7 @@ button{
       return ["Príslušnosť k mužskému rodu?",'Rodová identita fluidná/premenlivá?',"Priťahujú ťa ženy?","Prezentuješ sa maskulínne?","Príslušnosť k ženskému rodu?","Prezentuješ sa feminínne?","Orientácia fluidná/premenlivá?","Priťahujú ťa muži?"]
     }
     else{
-      return ["Muž. rod?",'Identita fluidná?',"Priťahujú ťa ženy?","Maskulínna prez.?","žen. rod?","Feminínna prez.?","Orient. fluidná?","Priťahujú ťa muži?"]
+      return ["1",'2',"3","4","5","6","7","8"]
     }
   }
 

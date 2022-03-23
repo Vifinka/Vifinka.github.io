@@ -331,6 +331,14 @@ button{
   padding-bottom: 40px;
 }
 
+#myChart{
+  width:70%;
+  max-width:350px;
+  background-color:white;
+  box-sizing: border-box;
+  margin:auto;
+}
+
 }
 
 </style>
@@ -482,14 +490,25 @@ button{
 
 <script>
 
+  function labels(){
+    if(window.innerWidth > 500){
+      return ["Príslušnosť k mužskému rodu?",'Rodová identita fluidná/premenlivá?',"Priťahujú ťa ženy?","Prezentuješ sa maskulínne?","Príslušnosť k ženskému rodu?","Prezentuješ sa feminínne?","Orientácia fluidná/premenlivá?","Priťahujú ťa muži?"]
+    }
+    else{
+      return ["Muž. rod?",'Identita fluidná?',"Priťahujú ťa ženy?","Maskulínna prez.?","žen. rod?","Feminínna prez.?","Orient. fluidná?","Priťahujú ťa muži?"]
+    }
+  }
+
 function results(){
   var xValues = ["Príslušnosť k mužskému rodu?",'Rodová identita fluidná/premenlivá?',"Priťahujú ťa ženy?","Prezentuješ sa maskulínne?","Príslušnosť k ženskému rodu?","Prezentuješ sa feminínne?","Orientácia fluidná/premenlivá?","Priťahujú ťa muži?"];
+  var xValuesm = ["Muž. rod?",'Identita fluidná?',"Priťahujú ťa ženy?","Maskulínna prez.?","žen. rod?","Feminínna prez.?","Orient. fluidná?","Priťahujú ťa muži?"];
+  
   var datas = [document.getElementById("ot1").value,document.getElementById("ot2").value,document.getElementById("ot3").value,document.getElementById("ot4").value,document.getElementById("ot5").value,document.getElementById("ot6").value,document.getElementById("ot7").value,document.getElementById("ot8").value];
 
 new Chart("myChart", {
   type: "radar",
   data: {
-    labels: xValues,
+    labels: labels(),
     datasets: [{
       data: datas,
       lineTension: 0,

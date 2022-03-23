@@ -161,37 +161,6 @@ width:100%;
     background-color: #009bb9;
 }
 
-@media screen and (max-width: 600px) {
-  .topnav a:not(:first-child), .dropdown .dropbtn {
-    display: none;
-  }
-  .topnav a.icon {
-    float: right;
-    display: block;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  .topnav.responsive {position: relative;}
-  .topnav.responsive .icon {
-    position: absolute;
-    right: 0;
-    top: 0;
-  }
-  .topnav.responsive a {
-    float: none;
-    display: block;
-    text-align: left;
-  }
-  .topnav.responsive .dropdown {float: none;}
-  .topnav.responsive .dropdown-content {position: relative;}
-  .topnav.responsive .dropdown .dropbtn {
-    display: block;
-    width: 100%;
-    text-align: left;
-  }
-}
-
 /* end menu */
     
         .intro-background{
@@ -336,6 +305,13 @@ width:100%;
             display:inline;
             padding-right:40px;
             padding-left:40px;
+            
+        }
+
+        .polkruh{
+            width:100%;
+            overflow:hidden;
+            padding-bottom:20px;
         }
 /* rgb(241,227,173)
 yellow
@@ -467,6 +443,93 @@ pink
             margin:auto;
         }
 
+        @media screen and (max-width: 1485px) {
+            .intro-background{
+                font-size:100px;
+                padding-bottom:100px;
+            }
+            .kviz-column-1{
+            width:100%;
+            float: left;
+            text-align:center;
+        }
+
+        .kviz-column-2{
+            width:100%;
+            float: left;
+            text-align:center;
+        }
+
+        .kviz-column-text{
+            width:80%;
+            padding-top:40px;
+            padding-bottom:60px;
+            margin:auto;
+        }
+        }
+
+        @media screen and (max-width: 925px) {
+            .intro-background{
+                font-size:50px;
+                padding-bottom:30px;
+            }
+            .about-column{
+            float:left;
+            width:100%;
+            padding-top:5px;
+            text-align:center;
+        }
+
+        .about-circle{
+            width:85%;
+            padding:8px;
+            padding-top:40px;
+            padding-bottom: 40px;
+            background-color: rgb(241,227,173);
+            box-sizing: content-box;
+            float:none;
+            margin: auto;
+            box-sizing: border-box;
+            border:5px solid black;
+            margin-bottom: 20px;
+        }
+
+
+    .skr-pismena{
+            font-size:100px;
+            display:inline;
+            padding-right:20px;
+            padding-left:20px;
+        }
+
+        .skratky-background{
+            padding-top:0px;
+            padding-bottom:30px;
+        }
+
+
+        .skr-circle{
+            width:300px;
+            height:300px;
+            padding:10px;
+            padding-top:0px;
+            border-radius: 50%;
+            margin:auto;
+            line-height:300px;
+            box-sizing: border-box;
+            border:5px solid black;
+        }
+        .skr-circle-text{
+            width:70%;
+            margin:auto;
+            text-align:justify;
+            vertical-align:middle;
+            line-height:1.5;
+            display: inline-block;
+            font-size:12px;
+        }
+
+        }
     </style>
 </head>
 <body>
@@ -608,5 +671,6 @@ pink
 </html>
 
 <script>
-    circle(1)
+    circle(1);
+    console.log(window.innerWidth)
 </script>

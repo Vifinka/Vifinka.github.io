@@ -116,37 +116,6 @@ width:100%;
     background-color: #009bb9;
 }
 
-@media screen and (max-width: 600px) {
-  .topnav a:not(:first-child), .dropdown .dropbtn {
-    display: none;
-  }
-  .topnav a.icon {
-    float: right;
-    display: block;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  .topnav.responsive {position: relative;}
-  .topnav.responsive .icon {
-    position: absolute;
-    right: 0;
-    top: 0;
-  }
-  .topnav.responsive a {
-    float: none;
-    display: block;
-    text-align: left;
-  }
-  .topnav.responsive .dropdown {float: none;}
-  .topnav.responsive .dropdown-content {position: relative;}
-  .topnav.responsive .dropdown .dropbtn {
-    display: block;
-    width: 100%;
-    text-align: left;
-  }
-}
-
 /* end menu */
 
 .quiz-bck{
@@ -316,6 +285,54 @@ button{
 
 }
 
+@media screen and (max-width: 1250px) {
+  .quiz-bck{
+    background-color: rgb(255, 255, 255);
+    width:100%;
+    padding-top:40px;
+    padding-bottom:40px;
+    padding-left:0px;
+    padding-right: 0px;
+  }
+}
+
+@media screen and (max-width: 925px) {
+  .quiz-col{
+    float: left;
+    width:100%; 
+    margin-bottom:20px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .quiz-card{
+    width:88%;
+    margin:auto;
+    box-sizing: border-box;
+    padding:5%; 
+    padding-top:60px;
+    padding-bottom:60px;
+    background-color:white;
+    border:8px solid #009bb9;
+    color:black;
+    text-align:center;
+    overflow: hidden;
+  }
+
+  label{
+    font-size: 15px;
+  }
+
+  .name{
+  text-align:center;
+  font-size:40px;
+  font-family: 'Ropa Sans', sans-serif;
+  font-style: italic;
+  padding-bottom: 40px;
+}
+
+}
+
 </style>
 <body>
 
@@ -376,7 +393,7 @@ button{
     <div class="quiz-row" id="row2">
       <div class="quiz-col">
         <div class="quiz-card" style="border-color: #f4c3c4;">
-          <label for="ot3">3. Do akej miery si priťahovaný/prťahovaná/priťahované ženami?</label><br>
+          <label for="ot3">3. Do akej miery si priťahovaný/priťahovaná/priťahované ženami?</label><br>
           <input class="slider" style="background-color: #f4c3c4;" type="range" min="0" max="10" value="5" class="slider" id="ot3">    
           <span class="quiz-yas"><i class="fa-solid fa-thumbs-up"></i></span>
           <span class="quiz-nah"><i class="fa-solid fa-thumbs-down"></i></span>
@@ -514,10 +531,7 @@ document.getElementById("result-bck").style.display = "none";
 document.getElementById("row").style.display = "block";
 
   }
-
 </script>
 
 </body>
 </html>
-
-
